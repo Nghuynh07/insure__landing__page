@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.nav {
+  &__container {
+    padding: 0 16.5rem;
+    min-height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
