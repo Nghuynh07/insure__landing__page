@@ -1,1 +1,12 @@
-$desktop-side-padding: 16.5rem;
+$side-padding: clamp(2.5rem, 9.5vw, 16.5rem);
+
+$font-serifDisplay: "DM Serif Display", serif;
+$front-karla: "Karla", sans-serif;
+$font-main-heading: clamp(4.8rem, 6vw, 7.2rem);
+
+// color
+$color-dark: #2c2830;
+$color-gray: #837d88;
+$color-purple: #2d2641;
+$color-pale-blue: 96A9C6;
+$color-white: #fff;

@@ -1,0 +1,9 @@
+@use "variables" as *;
+
+@mixin font($fontSize, $letterSpacing, $fontWt, $color, $textTransform) {
+  font-size: $fontSize;
+  letter-spacing: $letterSpacing;
+  font-weight: $fontWt;
+  color: $color;
+  text-transform: $textTransform;
+}

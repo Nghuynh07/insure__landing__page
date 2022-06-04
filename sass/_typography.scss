@@ -1,10 +1,126 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+/*=============================================
+=            NAV STARTS            =
+=============================================*/
+
 .nav {
   &__item {
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    @include font(2rem, 0.1rem, 700, $color-white, uppercase);
+    transition: color 0.3s;
+    &:hover {
+      color: $color-pale-blue;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__item {
+      &--desktop {
+        @include font(1.3rem, 0.1rem, 400, $color-purple, uppercase);
+        &:hover {
+          color: $color-dark;
+        }
+      }
+    }
   }
 }
+
+/*=====  NAV ENDS  ======*/
+
+/*=============================================
+=            HEADER STARTS            =
+=============================================*/
+
+.header {
+  // $font-main-heading
+  &__heading {
+    @include font($font-main-heading, 0.05, 700, $color-white, none);
+    font-family: $font-serifDisplay;
+    line-height: 1.1;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  &__text {
+    @include font(1.6rem, 0.1, 400, $color-white, none);
+    line-height: 1.8;
+    text-align: center;
+    padding: 0 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    &__heading {
+      // margin-top: 5rem;
+    }
+    &__heading,
+    &__text {
+      text-align: left;
+      padding: 0;
+    }
+  }
+}
+
+/*=====  HEADER ENDS  ======*/
+
+/*=============================================
+=            MAIN SECTION ONE STARTS          =
+=============================================*/
+
+.section1 {
+  &__heading {
+    @include font($font-main-heading, 0.05, 700, $color-purple, none);
+    font-family: $font-serifDisplay;
+    text-align: center;
+  }
+
+  &__title {
+    @include font(2.8rem, 0.05, 700, $color-purple, none);
+    font-family: $font-serifDisplay;
+  }
+  &__text {
+    @include font(1.6rem, 0.05, none, $color-gray, none);
+    font-family: $front-karla;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 580px) {
+    &__heading {
+      text-align: left;
+    }
+    &__title {
+      font-size: 2.5rem;
+    }
+    &__text {
+      text-align: left;
+    }
+  }
+}
+
+/*=============================================
+=            MAIN SECTION TWO STARTS             =
+=============================================*/
+
+.section2 {
+  &__heading {
+    @include font(clamp(3.8rem, 3vw, 5.6rem), 0.05, 700, $color-white, none);
+    font-family: $font-serifDisplay;
+    line-height: 1;
+    text-align: center;
+  }
+  @media (min-width: 580px) {
+    &__heading {
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__heading {
+      padding-right: 30rem;
+    }
+  }
+}
+
+/*=============================================
+=            MAIN SECTION TWO ENDS             =
+=============================================*/
