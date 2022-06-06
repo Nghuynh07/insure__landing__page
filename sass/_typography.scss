@@ -7,19 +7,19 @@
 
 .nav {
   &__item {
-    @include font(2rem, 0.1rem, 700, $color-white, uppercase);
-    transition: color 0.3s;
-    &:hover {
-      color: $color-pale-blue;
-    }
+    @include font(var(--20px), 2px, 700, $color-white, uppercase);
   }
 
   @media (min-width: 768px) {
     &__item {
+      font-size: var(--13px);
       &--desktop {
-        @include font(1.3rem, 0.1rem, 400, $color-purple, uppercase);
-        &:hover {
-          color: $color-dark;
+        color: $color-gray;
+        @media screen and (prefers-reduced-motion: no-preference) {
+          transition: color 0.3s;
+          &:hover {
+            color: $color-dark;
+          }
         }
       }
     }
@@ -39,18 +39,17 @@
     font-family: $font-serifDisplay;
     line-height: 1.1;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 0.625rem;
   }
   &__text {
-    @include font(1.6rem, 0.1, 400, $color-white, none);
+    @include font(var(--16px), 0.1, 400, $color-white, none);
     line-height: 1.8;
     text-align: center;
-    padding: 0 2.5rem;
+    padding: 0 1.5625rem;
   }
 
   @media (min-width: 768px) {
     &__heading {
-      // margin-top: 5rem;
     }
     &__heading,
     &__text {
@@ -74,11 +73,11 @@
   }
 
   &__title {
-    @include font(2.8rem, 0.05, 700, $color-purple, none);
+    @include font(1.75rem, 0.05, 700, $color-purple, none);
     font-family: $font-serifDisplay;
   }
   &__text {
-    @include font(1.6rem, 0.05, none, $color-gray, none);
+    @include font(var(--16px), 0.05, none, $color-gray, none);
     font-family: $front-karla;
     text-align: center;
     line-height: 1.6;
@@ -89,7 +88,7 @@
       text-align: left;
     }
     &__title {
-      font-size: 2.5rem;
+      font-size: 1.5625rem;
     }
     &__text {
       text-align: left;
@@ -103,12 +102,18 @@
 
 .section2 {
   &__heading {
-    @include font(clamp(3.8rem, 3vw, 5.6rem), 0.05, 700, $color-white, none);
+    @include font(
+      clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem),
+      0.05,
+      700,
+      $color-white,
+      none
+    );
     font-family: $font-serifDisplay;
     line-height: 1;
     text-align: center;
   }
-  @media (min-width: 580px) {
+  @media (min-width: 700px) {
     &__heading {
       text-align: left;
     }
@@ -116,11 +121,32 @@
 
   @media (min-width: 1440px) {
     &__heading {
-      padding-right: 30rem;
+      // padding-right: 11rem;
     }
   }
 }
 
 /*=============================================
 =            MAIN SECTION TWO ENDS             =
+=============================================*/
+.footer {
+  &__nav {
+    @include font(var(--13px), 0.05, 400, $color-gray, uppercase);
+  }
+  &__item {
+    @include font(var(--13px), 0.05, 400, $color-dark, uppercase);
+    @media screen and (prefers-reduced-motion: no-preference) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/*=============================================
+=            FOOTER STARTS             =
+=============================================*/
+
+/*=============================================
+=            FOOTER ENDS             =
 =============================================*/

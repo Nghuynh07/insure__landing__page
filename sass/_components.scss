@@ -1,23 +1,2 @@
 @use "variables" as *;
 @use "mixins" as *;
-
-.nav__btn {
-  @include font(2rem, 0.1rem, 700, $color-white, uppercase);
-  padding: 1.2rem 9rem;
-  border: 0.1rem solid $color-white;
-  transition: color 0.3s, background-color 0.3s;
-
-  @media (min-width: 768px) {
-    &--desktop {
-      @include font(1.3rem, 0.1rem, 700, $color-purple, uppercase);
-      padding: 1.2rem clamp(3rem, 5vw, 5rem);
-      border: 0.2rem solid $color-purple;
-      &:hover {
-        color: $color-white;
-        background-color: $color-dark;
-      }
-    }
-  }
-  @media (min-width: 1440px) {
-  }
-}
